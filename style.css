@@ -1,0 +1,16 @@
+body { font-family: 'Arial', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; padding: 20px 5%; background: #222; color: #fff; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: white; text-decoration: none; }
+
+.hero { background: #f4f4f4; padding: 60px 5%; text-align: center; border-bottom: 4px solid #25D366; }
+.btn-whatsapp { background: #25D366; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+
+.container { padding: 50px 5%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.card, .demo-box { border: 1px solid #ddd; padding: 20px; text-align: center; border-radius: 8px; transition: 0.3s; }
+.card:hover { border-color: #25D366; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+footer { background: #222; color: white; text-align: center; padding: 40px 0; margin-top: 50px; }
+.socials i { font-size: 24px; margin: 0 10px; color: white; }

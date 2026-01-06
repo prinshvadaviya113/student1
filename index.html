@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Print | Premium Packaging</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --gold: #D4AF37; --dark: #0f0f0f; --card: #1a1a1a; --white: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--dark); color: var(--white); }
+
+        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
+        .nav-logo { font-size: 24px; font-weight: bold; color: var(--gold); text-decoration: none; }
+
+        .dept-title { text-align: center; color: var(--gold); font-size: 28px; margin: 50px 0 30px 0; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Layout Grids */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 8%; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; padding: 0 15%; }
+        .grid-10 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; padding: 0 8%; }
+
+        .photo-card { background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid #333; transition: 0.3s; text-align: center; }
+        .photo-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+
+        /* Image sizes using .jpg logic */
+        .img-main { width: 100%; height: 300px; object-fit: cover; }
+        .img-industrial { width: 100%; height: 550px; object-fit: cover; }
+        .img-demo { width: 100%; height: 220px; object-fit: cover; }
+
+        .label { padding: 12px; font-size: 14px; font-weight: bold; color: var(--gold); background: #000; }
+
+        /* REVIEWS AT THE BOTTOM */
+        .review-section { padding: 60px 5%; background: #0a0a0a; border-top: 1px solid #333; margin-top: 50px; }
+        .review-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+        .review-card { background: var(--card); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #222; }
+        .reviewer-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; border: 2px solid var(--gold); }
+        .stars { color: #f1c40f; font-size: 14px; margin-bottom: 5px; }
+        .review-text { font-size: 12px; font-style: italic; color: #bbb; }
+
+        footer { background: #000; padding: 40px; text-align: center; border-top: 2px solid var(--gold); }
+        .social-icons a { font-size: 30px; margin: 0 20px; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo">NATIONAL PRINT</a>
+        <a href="https://wa.me/919726380301" style="color:#25D366; text-decoration:none; font-weight:bold;"><i class="fab fa-whatsapp"></i> Chat with Prinsh</a>
+    </nav>
+
+    <h2 class="dept-title">Main Services</h2>
+    <div class="grid-3">
+        <div class="photo-card"><img src="{{ url_for('static', filename='main1.jpg') }}" class="img-main"><div class="label">Pouch Printing</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='main2.jpg') }}" class="img-main"><div class="label">Mono Carton Boxes</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='main3.jpg') }}" class="img-main"><div class="label">Sticker Printing</div></div>
+    </div>
+
+    <h2 class="dept-title">Industrial & Specialty Bags</h2>
+    <div class="grid-2">
+        <div class="photo-card"><img src="{{ url_for('static', filename='indus1.jpg') }}" class="img-industrial"><div class="label">BOPP Industrial Bags</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='indus2.jpg') }}" class="img-industrial"><div class="label">Specialty Heavy Duty Bags</div></div>
+    </div>
+
+    <h2 class="dept-title">Pouch Demos Gallery</h2>
+    <div class="grid-10">
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo1.jpg') }}" class="img-demo"><div class="label">Style 1</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo2.jpg') }}" class="img-demo"><div class="label">Style 2</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo3.jpg') }}" class="img-demo"><div class="label">Style 3</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo4.jpg') }}" class="img-demo"><div class="label">Style 4</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo5.jpg') }}" class="img-demo"><div class="label">Style 5</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo6.jpg') }}" class="img-demo"><div class="label">Style 6</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo7.jpg') }}" class="img-demo"><div class="label">Style 7</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo8.jpg') }}" class="img-demo"><div class="label">Style 8</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo9.jpg') }}" class="img-demo"><div class="label">Style 9</div></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='demo10.jpg') }}" class="img-demo"><div class="label">Style 10</div></div>
+    </div>
+
+    <div class="review-section">
+        <h2 style="text-align:center; color:var(--gold); margin-bottom:40px;">CUSTOMER REVIEWS</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <img src="{{ url_for('static', filename='review1.jpg') }}" class="reviewer-img">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Excellent quality pouches."</p>
+                <p style="color:var(--gold); font-size:12px;">- Rahul S.</p>
+            </div>
+            <div class="review-card">
+                <img src="{{ url_for('static', filename='review2.jpg') }}" class="reviewer-img">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Fast delivery on BOPP bags."</p>
+                <p style="color:var(--gold); font-size:12px;">- Vikram J.</p>
+            </div>
+            <div class="review-card">
+                <img src="{{ url_for('static', filename='review3.jpg') }}" class="reviewer-img">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Premium mono cartons."</p>
+                <p style="color:var(--gold); font-size:12px;">- Anjali P.</p>
+            </div>
+            <div class="review-card">
+                <img src="{{ url_for('static', filename='review4.jpg') }}" class="reviewer-img">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Highly professional owner."</p>
+                <p style="color:var(--gold); font-size:12px;">- Suresh K.</p>
+            </div>
+            <div class="review-card">
+                <img src="{{ url_for('static', filename='review5.jpg') }}" class="reviewer-img">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Strong zipper quality."</p>
+                <p style="color:var(--gold); font-size:12px;">- Mehul D.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/919726380301" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/{{ info.insta }}" style="color:#E1306C;"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:{{ info.email }}" style="color:var(--gold);"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-top:20px;">Prinsh Patel | National Print | 9726380301</p>
+    </footer>
+
+</body>
+</html>
